@@ -9,8 +9,6 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-    
-    let tableVie = UITableView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,10 +16,6 @@ class BaseViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    func setupTableView() {
-        
-    }
 
     /*
     // MARK: - Navigation

@@ -26,11 +26,17 @@ class AllDevicesViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .purple
-        view = tableView
+        setupTableView()
+        setupViewModel()
+    }
+    
+    private func setupTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
-        viewModel.setupViewModelWith(tableView: self.tableView)
-        // Do any additional setup after loading the view.
+        view = tableView
+    }
+    
+    private func setupViewModel() {
+         viewModel.setupViewModelWith(tableView: self.tableView)
     }
     
 
