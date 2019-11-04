@@ -3,19 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4B07AD85236F688C00DC82E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07AD84236F688C00DC82E1 /* AppDelegate.swift */; };
 		4B07AD87236F688C00DC82E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07AD86236F688C00DC82E1 /* SceneDelegate.swift */; };
-		4B07AD89236F688C00DC82E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07AD88236F688C00DC82E1 /* ViewController.swift */; };
+		4B07AD89236F688C00DC82E1 /* AllDevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07AD88236F688C00DC82E1 /* AllDevicesViewController.swift */; };
 		4B07AD8C236F688D00DC82E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B07AD8A236F688C00DC82E1 /* Main.storyboard */; };
 		4B07AD8F236F688D00DC82E1 /* Devolo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B07AD8D236F688D00DC82E1 /* Devolo.xcdatamodeld */; };
 		4B07AD91236F689200DC82E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B07AD90236F689200DC82E1 /* Assets.xcassets */; };
 		4B07AD94236F689200DC82E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B07AD92236F689200DC82E1 /* LaunchScreen.storyboard */; };
 		4B07AD9F236F689200DC82E1 /* DevoloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07AD9E236F689200DC82E1 /* DevoloTests.swift */; };
 		4B07ADAA236F689200DC82E1 /* DevoloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07ADA9236F689200DC82E1 /* DevoloUITests.swift */; };
+		4B07ADBC236F6E9000DC82E1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07ADBB236F6E9000DC82E1 /* BaseViewController.swift */; };
+		4B07ADBE236F6F9500DC82E1 /* AllDevicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07ADBD236F6F9500DC82E1 /* AllDevicesViewModel.swift */; };
+		4B07ADC1236F6FEF00DC82E1 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07ADC0236F6FEF00DC82E1 /* BaseViewModel.swift */; };
+		4B07ADC4236F779B00DC82E1 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07ADC3236F779B00DC82E1 /* Device.swift */; };
+		4B07ADE1236F91E400DC82E1 /* MMLANScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B07ADC7236F91E400DC82E1 /* MMLANScanner.m */; };
+		4B07ADE2236F91E400DC82E1 /* MACOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B07ADCC236F91E400DC82E1 /* MACOperation.m */; };
+		4B07ADE3236F91E400DC82E1 /* NetworkCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B07ADCD236F91E400DC82E1 /* NetworkCalculator.m */; };
+		4B07ADE4236F91E400DC82E1 /* LANProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B07ADCF236F91E400DC82E1 /* LANProperties.m */; };
+		4B07ADE5236F91E400DC82E1 /* PingOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B07ADD0236F91E400DC82E1 /* PingOperation.m */; };
+		4B07ADE6236F91E400DC82E1 /* MacFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B07ADD3236F91E400DC82E1 /* MacFinder.m */; };
+		4B07ADE7236F91E400DC82E1 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B07ADDB236F91E400DC82E1 /* SimplePing.m */; };
+		4B07ADE8236F91E400DC82E1 /* MMDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B07ADDD236F91E400DC82E1 /* MMDevice.m */; };
+		4B07ADE9236F91E400DC82E1 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B07ADE0236F91E400DC82E1 /* data.plist */; };
+		58BF2F040EF4AF20DBDEC882 /* Pods_Devolo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E8913C82C6BF0DAA6C45AC /* Pods_Devolo.framework */; };
+		8803CE33683264B3F98607A6 /* Pods_DevoloTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B8AF6478CE9830C03D507C /* Pods_DevoloTests.framework */; };
+		DA9A4925D966B4E4B8751965 /* Pods_DevoloUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6321AD5A5E6646B70DD7ADAA /* Pods_DevoloUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +52,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BA228140AC279EFA32B023C /* Pods-DevoloTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevoloTests.debug.xcconfig"; path = "Target Support Files/Pods-DevoloTests/Pods-DevoloTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4B07AD81236F688C00DC82E1 /* Devolo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Devolo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B07AD84236F688C00DC82E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B07AD86236F688C00DC82E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4B07AD88236F688C00DC82E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B07AD88236F688C00DC82E1 /* AllDevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDevicesViewController.swift; sourceTree = "<group>"; };
 		4B07AD8B236F688C00DC82E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B07AD8E236F688D00DC82E1 /* Devolo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Devolo.xcdatamodel; sourceTree = "<group>"; };
 		4B07AD90236F689200DC82E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +68,39 @@
 		4B07ADA5236F689200DC82E1 /* DevoloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DevoloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B07ADA9236F689200DC82E1 /* DevoloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevoloUITests.swift; sourceTree = "<group>"; };
 		4B07ADAB236F689200DC82E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B07ADBB236F6E9000DC82E1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4B07ADBD236F6F9500DC82E1 /* AllDevicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDevicesViewModel.swift; sourceTree = "<group>"; };
+		4B07ADC0236F6FEF00DC82E1 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		4B07ADC3236F779B00DC82E1 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		4B07ADC7236F91E400DC82E1 /* MMLANScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLANScanner.m; sourceTree = "<group>"; };
+		4B07ADC8236F91E400DC82E1 /* NetworkCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCalculator.h; sourceTree = "<group>"; };
+		4B07ADC9236F91E400DC82E1 /* MACOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACOperation.h; sourceTree = "<group>"; };
+		4B07ADCA236F91E400DC82E1 /* LANProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LANProperties.h; sourceTree = "<group>"; };
+		4B07ADCB236F91E400DC82E1 /* PingOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingOperation.h; sourceTree = "<group>"; };
+		4B07ADCC236F91E400DC82E1 /* MACOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACOperation.m; sourceTree = "<group>"; };
+		4B07ADCD236F91E400DC82E1 /* NetworkCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCalculator.m; sourceTree = "<group>"; };
+		4B07ADCE236F91E400DC82E1 /* MMLANScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLANScanner.h; sourceTree = "<group>"; };
+		4B07ADCF236F91E400DC82E1 /* LANProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LANProperties.m; sourceTree = "<group>"; };
+		4B07ADD0236F91E400DC82E1 /* PingOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingOperation.m; sourceTree = "<group>"; };
+		4B07ADD3236F91E400DC82E1 /* MacFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFinder.m; sourceTree = "<group>"; };
+		4B07ADD5236F91E400DC82E1 /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
+		4B07ADD6236F91E400DC82E1 /* if_ether.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_ether.h; sourceTree = "<group>"; };
+		4B07ADD7236F91E400DC82E1 /* if_arp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_arp.h; sourceTree = "<group>"; };
+		4B07ADD8236F91E400DC82E1 /* MacFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFinder.h; sourceTree = "<group>"; };
+		4B07ADDA236F91E400DC82E1 /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
+		4B07ADDB236F91E400DC82E1 /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
+		4B07ADDD236F91E400DC82E1 /* MMDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDevice.m; sourceTree = "<group>"; };
+		4B07ADDE236F91E400DC82E1 /* MMDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDevice.h; sourceTree = "<group>"; };
+		4B07ADE0236F91E400DC82E1 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		4B07ADEA236F924100DC82E1 /* MMLANScan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MMLANScan-Bridging-Header.h"; sourceTree = "<group>"; };
+		4EF2E9813BB1E5AD51F90F37 /* Pods-DevoloUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevoloUITests.debug.xcconfig"; path = "Target Support Files/Pods-DevoloUITests/Pods-DevoloUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		51E8913C82C6BF0DAA6C45AC /* Pods_Devolo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Devolo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59C539C746D6DF19F25EE9DD /* Pods-DevoloUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevoloUITests.release.xcconfig"; path = "Target Support Files/Pods-DevoloUITests/Pods-DevoloUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6321AD5A5E6646B70DD7ADAA /* Pods_DevoloUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevoloUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72B8AF6478CE9830C03D507C /* Pods_DevoloTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevoloTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8026F1034961B155378029E4 /* Pods-Devolo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Devolo.release.xcconfig"; path = "Target Support Files/Pods-Devolo/Pods-Devolo.release.xcconfig"; sourceTree = "<group>"; };
+		D95A479E434254C870AA86C0 /* Pods-Devolo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Devolo.debug.xcconfig"; path = "Target Support Files/Pods-Devolo/Pods-Devolo.debug.xcconfig"; sourceTree = "<group>"; };
+		F10C983E766507B21A358AC4 /* Pods-DevoloTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevoloTests.release.xcconfig"; path = "Target Support Files/Pods-DevoloTests/Pods-DevoloTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58BF2F040EF4AF20DBDEC882 /* Pods_Devolo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8803CE33683264B3F98607A6 /* Pods_DevoloTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA9A4925D966B4E4B8751965 /* Pods_DevoloUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +138,8 @@
 				4B07AD9D236F689200DC82E1 /* DevoloTests */,
 				4B07ADA8236F689200DC82E1 /* DevoloUITests */,
 				4B07AD82236F688C00DC82E1 /* Products */,
+				CB41194C9FBC878CB5BB8C50 /* Pods */,
+				516E9D63C819BA707529CC67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,13 +156,14 @@
 		4B07AD83236F688C00DC82E1 /* Devolo */ = {
 			isa = PBXGroup;
 			children = (
-				4B07AD84236F688C00DC82E1 /* AppDelegate.swift */,
-				4B07AD86236F688C00DC82E1 /* SceneDelegate.swift */,
-				4B07AD88236F688C00DC82E1 /* ViewController.swift */,
-				4B07AD8A236F688C00DC82E1 /* Main.storyboard */,
-				4B07AD90236F689200DC82E1 /* Assets.xcassets */,
-				4B07AD92236F689200DC82E1 /* LaunchScreen.storyboard */,
-				4B07AD95236F689200DC82E1 /* Info.plist */,
+				4B07ADC5236F91E400DC82E1 /* MMLanScan */,
+				4B07ADC2236F778700DC82E1 /* Model */,
+				4B07ADB9236F6E5C00DC82E1 /* BaseComponents */,
+				4B07ADB8236F69D800DC82E1 /* Resources */,
+				4B07ADB7236F69C300DC82E1 /* AppDelegate */,
+				4B07AD88236F688C00DC82E1 /* AllDevicesViewController.swift */,
+				4B07ADBD236F6F9500DC82E1 /* AllDevicesViewModel.swift */,
+				4B07ADEA236F924100DC82E1 /* MMLANScan-Bridging-Header.h */,
 				4B07AD8D236F688D00DC82E1 /* Devolo.xcdatamodeld */,
 			);
 			path = Devolo;
@@ -131,6 +187,157 @@
 			path = DevoloUITests;
 			sourceTree = "<group>";
 		};
+		4B07ADB7236F69C300DC82E1 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4B07AD84236F688C00DC82E1 /* AppDelegate.swift */,
+				4B07AD86236F688C00DC82E1 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		4B07ADB8236F69D800DC82E1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4B07AD8A236F688C00DC82E1 /* Main.storyboard */,
+				4B07AD90236F689200DC82E1 /* Assets.xcassets */,
+				4B07AD92236F689200DC82E1 /* LaunchScreen.storyboard */,
+				4B07AD95236F689200DC82E1 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4B07ADB9236F6E5C00DC82E1 /* BaseComponents */ = {
+			isa = PBXGroup;
+			children = (
+				4B07ADBA236F6E6F00DC82E1 /* BaseViews */,
+				4B07ADBB236F6E9000DC82E1 /* BaseViewController.swift */,
+				4B07ADC0236F6FEF00DC82E1 /* BaseViewModel.swift */,
+			);
+			path = BaseComponents;
+			sourceTree = "<group>";
+		};
+		4B07ADBA236F6E6F00DC82E1 /* BaseViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseViews;
+			sourceTree = "<group>";
+		};
+		4B07ADC2236F778700DC82E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B07ADC3236F779B00DC82E1 /* Device.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B07ADC5236F91E400DC82E1 /* MMLanScan */ = {
+			isa = PBXGroup;
+			children = (
+				4B07ADC6236F91E400DC82E1 /* Misc */,
+				4B07ADD1236F91E400DC82E1 /* External Libs */,
+				4B07ADDC236F91E400DC82E1 /* Objects */,
+				4B07ADDF236F91E400DC82E1 /* Data */,
+			);
+			path = MMLanScan;
+			sourceTree = "<group>";
+		};
+		4B07ADC6236F91E400DC82E1 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				4B07ADC7236F91E400DC82E1 /* MMLANScanner.m */,
+				4B07ADC8236F91E400DC82E1 /* NetworkCalculator.h */,
+				4B07ADC9236F91E400DC82E1 /* MACOperation.h */,
+				4B07ADCA236F91E400DC82E1 /* LANProperties.h */,
+				4B07ADCB236F91E400DC82E1 /* PingOperation.h */,
+				4B07ADCC236F91E400DC82E1 /* MACOperation.m */,
+				4B07ADCD236F91E400DC82E1 /* NetworkCalculator.m */,
+				4B07ADCE236F91E400DC82E1 /* MMLANScanner.h */,
+				4B07ADCF236F91E400DC82E1 /* LANProperties.m */,
+				4B07ADD0236F91E400DC82E1 /* PingOperation.m */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		4B07ADD1236F91E400DC82E1 /* External Libs */ = {
+			isa = PBXGroup;
+			children = (
+				4B07ADD2236F91E400DC82E1 /* MacFinder */,
+				4B07ADD9236F91E400DC82E1 /* SimplePing */,
+			);
+			path = "External Libs";
+			sourceTree = "<group>";
+		};
+		4B07ADD2236F91E400DC82E1 /* MacFinder */ = {
+			isa = PBXGroup;
+			children = (
+				4B07ADD3236F91E400DC82E1 /* MacFinder.m */,
+				4B07ADD4236F91E400DC82E1 /* Network Headers */,
+				4B07ADD8236F91E400DC82E1 /* MacFinder.h */,
+			);
+			path = MacFinder;
+			sourceTree = "<group>";
+		};
+		4B07ADD4236F91E400DC82E1 /* Network Headers */ = {
+			isa = PBXGroup;
+			children = (
+				4B07ADD5236F91E400DC82E1 /* route.h */,
+				4B07ADD6236F91E400DC82E1 /* if_ether.h */,
+				4B07ADD7236F91E400DC82E1 /* if_arp.h */,
+			);
+			path = "Network Headers";
+			sourceTree = "<group>";
+		};
+		4B07ADD9236F91E400DC82E1 /* SimplePing */ = {
+			isa = PBXGroup;
+			children = (
+				4B07ADDA236F91E400DC82E1 /* SimplePing.h */,
+				4B07ADDB236F91E400DC82E1 /* SimplePing.m */,
+			);
+			path = SimplePing;
+			sourceTree = "<group>";
+		};
+		4B07ADDC236F91E400DC82E1 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				4B07ADDD236F91E400DC82E1 /* MMDevice.m */,
+				4B07ADDE236F91E400DC82E1 /* MMDevice.h */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		4B07ADDF236F91E400DC82E1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4B07ADE0236F91E400DC82E1 /* data.plist */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		516E9D63C819BA707529CC67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51E8913C82C6BF0DAA6C45AC /* Pods_Devolo.framework */,
+				72B8AF6478CE9830C03D507C /* Pods_DevoloTests.framework */,
+				6321AD5A5E6646B70DD7ADAA /* Pods_DevoloUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB41194C9FBC878CB5BB8C50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D95A479E434254C870AA86C0 /* Pods-Devolo.debug.xcconfig */,
+				8026F1034961B155378029E4 /* Pods-Devolo.release.xcconfig */,
+				1BA228140AC279EFA32B023C /* Pods-DevoloTests.debug.xcconfig */,
+				F10C983E766507B21A358AC4 /* Pods-DevoloTests.release.xcconfig */,
+				4EF2E9813BB1E5AD51F90F37 /* Pods-DevoloUITests.debug.xcconfig */,
+				59C539C746D6DF19F25EE9DD /* Pods-DevoloUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +345,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B07ADAE236F689200DC82E1 /* Build configuration list for PBXNativeTarget "Devolo" */;
 			buildPhases = (
+				8919CA42E5DB1528552EB7A6 /* [CP] Check Pods Manifest.lock */,
 				4B07AD7D236F688C00DC82E1 /* Sources */,
 				4B07AD7E236F688C00DC82E1 /* Frameworks */,
 				4B07AD7F236F688C00DC82E1 /* Resources */,
+				12CD9D709FC15DB07248A1AC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +364,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B07ADB1236F689200DC82E1 /* Build configuration list for PBXNativeTarget "DevoloTests" */;
 			buildPhases = (
+				FCB2580CB9D93302692D74E8 /* [CP] Check Pods Manifest.lock */,
 				4B07AD96236F689200DC82E1 /* Sources */,
 				4B07AD97236F689200DC82E1 /* Frameworks */,
 				4B07AD98236F689200DC82E1 /* Resources */,
@@ -173,6 +383,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B07ADB4236F689200DC82E1 /* Build configuration list for PBXNativeTarget "DevoloUITests" */;
 			buildPhases = (
+				1BB87B389BCF4F6BE56E2910 /* [CP] Check Pods Manifest.lock */,
 				4B07ADA1236F689200DC82E1 /* Sources */,
 				4B07ADA2236F689200DC82E1 /* Frameworks */,
 				4B07ADA3236F689200DC82E1 /* Resources */,
@@ -237,6 +448,7 @@
 			files = (
 				4B07AD94236F689200DC82E1 /* LaunchScreen.storyboard in Resources */,
 				4B07AD91236F689200DC82E1 /* Assets.xcassets in Resources */,
+				4B07ADE9236F91E400DC82E1 /* data.plist in Resources */,
 				4B07AD8C236F688D00DC82E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,15 +469,113 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12CD9D709FC15DB07248A1AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Devolo/Pods-Devolo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Devolo/Pods-Devolo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Devolo/Pods-Devolo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BB87B389BCF4F6BE56E2910 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DevoloUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8919CA42E5DB1528552EB7A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Devolo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCB2580CB9D93302692D74E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DevoloTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4B07AD7D236F688C00DC82E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4B07AD8F236F688D00DC82E1 /* Devolo.xcdatamodeld in Sources */,
-				4B07AD89236F688C00DC82E1 /* ViewController.swift in Sources */,
+				4B07ADE3236F91E400DC82E1 /* NetworkCalculator.m in Sources */,
+				4B07ADBC236F6E9000DC82E1 /* BaseViewController.swift in Sources */,
+				4B07ADE7236F91E400DC82E1 /* SimplePing.m in Sources */,
+				4B07ADE1236F91E400DC82E1 /* MMLANScanner.m in Sources */,
+				4B07ADBE236F6F9500DC82E1 /* AllDevicesViewModel.swift in Sources */,
+				4B07ADC1236F6FEF00DC82E1 /* BaseViewModel.swift in Sources */,
+				4B07AD89236F688C00DC82E1 /* AllDevicesViewController.swift in Sources */,
+				4B07ADE6236F91E400DC82E1 /* MacFinder.m in Sources */,
 				4B07AD85236F688C00DC82E1 /* AppDelegate.swift in Sources */,
+				4B07ADE2236F91E400DC82E1 /* MACOperation.m in Sources */,
 				4B07AD87236F688C00DC82E1 /* SceneDelegate.swift in Sources */,
+				4B07ADE4236F91E400DC82E1 /* LANProperties.m in Sources */,
+				4B07ADE5236F91E400DC82E1 /* PingOperation.m in Sources */,
+				4B07ADC4236F779B00DC82E1 /* Device.swift in Sources */,
+				4B07ADE8236F91E400DC82E1 /* MMDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +680,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Devolo/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -424,6 +735,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Devolo/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -436,17 +748,19 @@
 		};
 		4B07ADAF236F689200DC82E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D95A479E434254C870AA86C0 /* Pods-Devolo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 973TU6JN8G;
-				INFOPLIST_FILE = Devolo/Info.plist;
+				INFOPLIST_FILE = Devolo/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vk.Devolo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Devolo/MMLANScan-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -454,17 +768,19 @@
 		};
 		4B07ADB0236F689200DC82E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8026F1034961B155378029E4 /* Pods-Devolo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 973TU6JN8G;
-				INFOPLIST_FILE = Devolo/Info.plist;
+				INFOPLIST_FILE = Devolo/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vk.Devolo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Devolo/MMLANScan-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -472,6 +788,7 @@
 		};
 		4B07ADB2236F689200DC82E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BA228140AC279EFA32B023C /* Pods-DevoloTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +811,7 @@
 		};
 		4B07ADB3236F689200DC82E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F10C983E766507B21A358AC4 /* Pods-DevoloTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -516,6 +834,7 @@
 		};
 		4B07ADB5236F689200DC82E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EF2E9813BB1E5AD51F90F37 /* Pods-DevoloUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -536,6 +855,7 @@
 		};
 		4B07ADB6236F689200DC82E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59C539C746D6DF19F25EE9DD /* Pods-DevoloUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
