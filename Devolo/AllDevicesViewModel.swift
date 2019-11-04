@@ -24,12 +24,20 @@ class AllDevicesViewModel : BaseViewModel {
         self.lanScanner = MMLANScanner(delegate:self)
     }
     
+    
+}
+
+// MARK: View setup
+extension AllDevicesViewModel {
     public func setupViewModelWith(tableView: UITableView) {
         setupCellConfigTo(tableView: tableView)
         setupCellSelectingTo(tableView: tableView)
         self.lanScanner.start()
     }
-    
+}
+
+// MARK: Rx setup
+extension AllDevicesViewModel {
     private func setupCellConfigTo(tableView: UITableView) {
       devices
         .bind(to: tableView
@@ -55,6 +63,7 @@ class AllDevicesViewModel : BaseViewModel {
         .disposed(by: disposeBag)
     }
 }
+
 
 // MARK: Scanner delegate
 extension AllDevicesViewModel: MMLANScannerDelegate {

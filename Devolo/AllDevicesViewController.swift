@@ -23,23 +23,33 @@ class AllDevicesViewController: BaseViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+//MARK: Controller life cycle
+extension AllDevicesViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         setupViewModel()
     }
+
+}
+//MARK: Setup view
+extension AllDevicesViewController {
     
     private func setupTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         view = tableView
     }
+
+}
+
+// MARK: Setup ViewModel
+extension AllDevicesViewController {
     
     private func setupViewModel() {
          viewModel.setupViewModelWith(tableView: self.tableView)
     }
     
-
-
 }
-

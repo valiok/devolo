@@ -14,7 +14,6 @@ class AllDevicesModuleBuilder {
         let viewModel = AllDevicesViewModel()
         let viewController = AllDevicesViewController(withViewModel: viewModel)
         let navigationController = UINavigationController(rootViewController: viewController)
-
         return navigationController
     }
 }
