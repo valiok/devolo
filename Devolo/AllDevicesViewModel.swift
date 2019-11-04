@@ -82,12 +82,22 @@ extension AllDevicesViewModel: MMLANScannerDelegate {
     
     public func lanScanDidFindNewDevice(_ device: MMDevice!) {
         let newDevice = Device(name: device.ipAddress, id: "e")
-        let newValue = devices.value + [newDevice]
-        devices.accept(newValue)
+        if !devices.value.contains(newDevice){
+            let newValue = devices.value + [newDevice]
+            devices.accept(newValue)
+        }
     }
     
     public func lanScanDidFinishScanning(with status: MMLanScannerStatus) {
-        print(status)
+        switch(status){
+        case MMLanScannerStatusFinished :
+            print("Scan complete")
+        case MMLanScannerStatusCancelled :
+            print("Scan cancelled")
+        default:
+            break
+        }
+        
     }
     
     public func lanScanDidFailedToScan() {
