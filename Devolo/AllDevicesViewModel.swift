@@ -12,29 +12,25 @@ import RxCocoa
 import RxSwift
 
 
-class AllDevicesViewModel : BaseViewModel, MMLANScannerDelegate {
+class AllDevicesViewModel : BaseViewModel {
     
-    private let tableView : UITableView
-    private var devices: BehaviorRelay<[Device]> = BehaviorRelay(value: [])
-
     private let disposeBag = DisposeBag()
+    
+    private var devices: BehaviorRelay<[Device]> = BehaviorRelay(value: [])
     private var lanScanner : MMLANScanner!
-
-    init(withTableView tableView: UITableView) {
-        self.tableView = tableView
+    
+    override init() {
         super.init()
         self.lanScanner = MMLANScanner(delegate:self)
-
     }
     
-    public func setupTableView() {
-        setupCellConfiguration()
-        setupCellTapHandling()
+    public func setupViewModelWith(tableView: UITableView) {
+        setupCellConfigTo(tableView: tableView)
+        setupCellSelectingTo(tableView: tableView)
         self.lanScanner.start()
     }
     
-    private func setupCellConfiguration() {
-      
+    private func setupCellConfigTo(tableView: UITableView) {
       devices
         .bind(to: tableView
           .rx
@@ -46,18 +42,22 @@ class AllDevicesViewModel : BaseViewModel, MMLANScannerDelegate {
         .disposed(by: disposeBag)
     }
     
-    private func setupCellTapHandling() {
+    private func setupCellSelectingTo(tableView: UITableView) {
       tableView
         .rx
         .modelSelected(Device.self)
-        .subscribe(onNext: { [unowned self] device in
+        .subscribe(onNext: { device in
             
-          if let selectedRowIndexPath = self.tableView.indexPathForSelectedRow {
-            self.tableView.deselectRow(at: selectedRowIndexPath, animated: true)
+          if let selectedRowIndexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: selectedRowIndexPath, animated: true)
           }
         })
         .disposed(by: disposeBag)
     }
+}
+
+// MARK: Scanner delegate
+extension AllDevicesViewModel: MMLANScannerDelegate {
     
     public func lanScanDidFindNewDevice(_ device: MMDevice!) {
         let newDevice = Device(name: device.ipAddress, id: "e")
@@ -72,10 +72,4 @@ class AllDevicesViewModel : BaseViewModel, MMLANScannerDelegate {
     public func lanScanDidFailedToScan() {
         print("Error: Failed to scan")
     }
-    
-    
-
-    
-
-    
 }

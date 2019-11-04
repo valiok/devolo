@@ -29,6 +29,7 @@
 		4B07ADE7236F91E400DC82E1 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B07ADDB236F91E400DC82E1 /* SimplePing.m */; };
 		4B07ADE8236F91E400DC82E1 /* MMDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B07ADDD236F91E400DC82E1 /* MMDevice.m */; };
 		4B07ADE9236F91E400DC82E1 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B07ADE0236F91E400DC82E1 /* data.plist */; };
+		4B07ADEC236FA3AB00DC82E1 /* AllDevicesModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B07ADEB236FA3AB00DC82E1 /* AllDevicesModuleBuilder.swift */; };
 		58BF2F040EF4AF20DBDEC882 /* Pods_Devolo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E8913C82C6BF0DAA6C45AC /* Pods_Devolo.framework */; };
 		8803CE33683264B3F98607A6 /* Pods_DevoloTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B8AF6478CE9830C03D507C /* Pods_DevoloTests.framework */; };
 		DA9A4925D966B4E4B8751965 /* Pods_DevoloUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6321AD5A5E6646B70DD7ADAA /* Pods_DevoloUITests.framework */; };
@@ -93,6 +94,7 @@
 		4B07ADDE236F91E400DC82E1 /* MMDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDevice.h; sourceTree = "<group>"; };
 		4B07ADE0236F91E400DC82E1 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		4B07ADEA236F924100DC82E1 /* MMLANScan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MMLANScan-Bridging-Header.h"; sourceTree = "<group>"; };
+		4B07ADEB236FA3AB00DC82E1 /* AllDevicesModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDevicesModuleBuilder.swift; sourceTree = "<group>"; };
 		4EF2E9813BB1E5AD51F90F37 /* Pods-DevoloUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevoloUITests.debug.xcconfig"; path = "Target Support Files/Pods-DevoloUITests/Pods-DevoloUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		51E8913C82C6BF0DAA6C45AC /* Pods_Devolo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Devolo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C539C746D6DF19F25EE9DD /* Pods-DevoloUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevoloUITests.release.xcconfig"; path = "Target Support Files/Pods-DevoloUITests/Pods-DevoloUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				4B07ADBD236F6F9500DC82E1 /* AllDevicesViewModel.swift */,
 				4B07ADEA236F924100DC82E1 /* MMLANScan-Bridging-Header.h */,
 				4B07AD8D236F688D00DC82E1 /* Devolo.xcdatamodeld */,
+				4B07ADEB236FA3AB00DC82E1 /* AllDevicesModuleBuilder.swift */,
 			);
 			path = Devolo;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B07AD8F236F688D00DC82E1 /* Devolo.xcdatamodeld in Sources */,
+				4B07ADEC236FA3AB00DC82E1 /* AllDevicesModuleBuilder.swift in Sources */,
 				4B07ADE3236F91E400DC82E1 /* NetworkCalculator.m in Sources */,
 				4B07ADBC236F6E9000DC82E1 /* BaseViewController.swift in Sources */,
 				4B07ADE7236F91E400DC82E1 /* SimplePing.m in Sources */,

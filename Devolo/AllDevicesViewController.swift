@@ -16,9 +16,8 @@ class AllDevicesViewController: BaseViewController {
     let tableView = UITableView()
 
     init(withViewModel viewModel: AllDevicesViewModel) {
-        self.viewModel = AllDevicesViewModel(withTableView: tableView)
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-
     }
     
     required init?(coder: NSCoder) {
@@ -30,7 +29,7 @@ class AllDevicesViewController: BaseViewController {
         view.backgroundColor = .purple
         view = tableView
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
-        viewModel.setupTableView()
+        viewModel.setupViewModelWith(tableView: self.tableView)
         // Do any additional setup after loading the view.
     }
     
