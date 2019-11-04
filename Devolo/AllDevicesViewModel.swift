@@ -23,8 +23,6 @@ class AllDevicesViewModel : BaseViewModel {
         super.init()
         self.lanScanner = MMLANScanner(delegate:self)
     }
-    
-    
 }
 
 // MARK: View setup
@@ -32,7 +30,6 @@ extension AllDevicesViewModel {
     public func setupViewModelWith(tableView: UITableView) {
         setupCellConfigTo(tableView: tableView)
         setupCellSelectingTo(tableView: tableView)
-        self.lanScanner.start()
     }
 }
 
@@ -42,7 +39,7 @@ extension AllDevicesViewModel {
       devices
         .bind(to: tableView
           .rx
-          .items(cellIdentifier: "UITableViewCell",
+          .items(cellIdentifier: "cellIdentifier",
                  cellType: UITableViewCell.self)) {
                   row, device, cell in
                     cell.textLabel?.text = device.name
@@ -61,6 +58,21 @@ extension AllDevicesViewModel {
           }
         })
         .disposed(by: disposeBag)
+    }
+    
+    func setupRightBarButtonItem(button: UIBarButtonItem) {
+        button.rx.tap.subscribe(onNext: { [weak self] _ in
+           self?.lanScanner.start()
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func setupLeftBarButtonItem(button: UIBarButtonItem) {
+        button.rx.tap.subscribe(onNext: { [weak self] _ in
+            self?.lanScanner.stop()
+            self?.devices.accept([])
+            })
+            .disposed(by: disposeBag)
     }
 }
 

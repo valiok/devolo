@@ -30,7 +30,7 @@ extension AllDevicesViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
+        setupView()
         setupViewModel()
     }
 
@@ -38,9 +38,24 @@ extension AllDevicesViewController {
 //MARK: Setup view
 extension AllDevicesViewController {
     
+    private func setupView() {
+        setupTableView()
+        setupNavigationBar()
+    }
+    
     private func setupTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellIdentifier")
         view = tableView
+    }
+    
+    private func setupNavigationBar() {
+        let rightButton = UIBarButtonItem(title: "scan", style: .done, target: self, action: nil)
+        navigationItem.rightBarButtonItem = rightButton
+        viewModel.setupRightBarButtonItem(button: rightButton)
+        
+        let leftButton = UIBarButtonItem(title: "reset", style: .done, target: self, action: nil)
+        navigationItem.leftBarButtonItem = leftButton
+        viewModel.setupLeftBarButtonItem(button: leftButton)
     }
 
 }
@@ -53,3 +68,4 @@ extension AllDevicesViewController {
     }
     
 }
+
